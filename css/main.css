@@ -1,0 +1,114 @@
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* propiedades del contenedor */
+
+.contenedor{
+
+    /* declaramos una altura para el contenedor */
+    height: 500px;
+    display: grid;
+
+    /* crear columnas */
+    grid-template-columns: 1fr 1fr;
+
+    /* crear filas */
+    grid-template-rows: 20% 80% ;
+}
+
+/* propiedades de los items  */
+
+.hijo-uno{
+    background-color: tomato;
+}
+
+.hijo-dos{
+    background-color: rgb(180, 85, 69);
+}
+
+.hijo-tres{
+    background-color: rgb(108, 57, 48);
+}
+
+.hijo-cuatro{
+    background-color: rgb(117, 75, 67);
+}
+
+
+/* codigo de ejemplo dos  */
+
+/* contenedor */
+
+.caja{
+    margin: 20px;
+    height: 600px;
+    background-color: pink;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: auto;
+
+    /* alineacion y justificacion */
+    justify-items: center;
+    align-items: center;
+}
+
+/* items */
+
+.item-uno, .item-cuatro{
+    justify-self: end;
+    align-self: end;
+}
+
+
+/* codigo de ejemplo tres  */
+
+.falso-body{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: ;
+    grid-template-rows: 0.5fr 2fr 1fr 0.5fr;
+
+    /* grid template areas */
+    grid-template-areas: 
+        "header header header"
+        "main main section"
+        "section-dos section-dos section"
+        "footer footer footer";
+    gap:10px;
+}
+
+
+header{
+    background-color: pink;
+    grid-area: header;
+}
+
+main{
+    background-color: rgb(246, 156, 171);
+    grid-area: main;
+}
+
+section{
+    background-color: rgb(234, 122, 141);
+    grid-area: section;
+}
+
+.section-dos{
+    background-color: rgb(231, 84, 108);
+    grid-area: section-dos;
+}
+
+footer{
+    background-color: rgb(234, 53, 83);
+    grid-area: footer;
+}
+
+
+
+
+
